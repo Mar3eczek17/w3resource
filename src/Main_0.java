@@ -1,8 +1,8 @@
-class Personn {
-    private final String name;
-    private final int age;
+class Person {
+    private String name;
+    private int age;
 
-    public Personn(String name, int age) {
+    public Person(String name, int age) {
         this.age = age;
         this.name = name;
     }
@@ -16,7 +16,7 @@ class Personn {
     }
 }
 
-public class Main_1 {
+public class Main_0 {
     public static void main(String[] args) {
         // Create an instance of the Person class
         Person person1 = new Person("Marek", 32);

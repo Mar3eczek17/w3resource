@@ -43,18 +43,19 @@ class Account {
         return name + ' ' + accountNumber + ' ' + balance;
     }
 }
-
+// class called "Bank" with a collection of accounts and methods
+// to add and remove
+// accounts, and to deposit and withdraw money.
 class Bank {
-    private static final ArrayList<Bank> accountsCollection = new ArrayList<Bank>();
-    public static void addAccounts(Bank bank) {
-        accountsCollection.add(bank);
+    private ArrayList<Account> accounts;
+    public Bank() {
+        accounts = new ArrayList<Account>();
     }
-    public static void removeAccounts(Bank bank) {
-        accountsCollection.remove(bank);
+    public void addAccount(Account account) {
+        accounts.add(account);
     }
-
-    public static ArrayList<Bank> getAccountsCollection() {
-        return accountsCollection;
+    public void removeAccount(Account account) {
+        accounts.remove(account);
     }
 }
 public class Main_7 {

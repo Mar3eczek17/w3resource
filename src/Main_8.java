@@ -5,11 +5,22 @@ class TrafficLight {
         this.color = color;
         this.duration = duration;
     }
+    public void changeColor(String newColor) {
+        color = newColor;
+    }
     public boolean isRed() {
         return color.equals("red");
     }
     public boolean isGreen() {
         return color.equals("green");
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 }
 public class Main_8 {
@@ -18,5 +29,12 @@ public class Main_8 {
 
         System.out.println("The light is red: " + light.isRed());
         System.out.println("The light is green: " + light.isGreen());
+
+        light.changeColor("green");
+
+        System.out.println("The light is now green: " + light.isGreen());
+        System.out.println("The light duration is: " + light.getDuration());
+        light.setDuration(20);
+        System.out.println("The light duration is now: " + light.getDuration());
     }
 }
